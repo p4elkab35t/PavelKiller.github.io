@@ -81,9 +81,9 @@ function snakeElementMoveToward(snakeDirection, elementNumber){
 }
 addEventListener("keydown", function(event){
 	switch(event.keyCode){
-		case 32: 
+		/*case 32: 
 			snakeElementAdd();
-			break;
+			break;*/
 		case 37: 
 			snakeTurn('left');
 			break;
