@@ -1,28 +1,28 @@
-﻿<!DOCTYPE html>
-	<html>
-		<head>
-			<title>FUCK YOU IVAN</title>
-			<meta charset="UTF-8">
-			<link rel="stylesheet" href="style.css" type="text/css">
-		 </head>
-		<body>
-			<div id="text">
-				BEST CODER YOU'VE EVER MET
-			</div>
-			<div id="ABCD">
-				<div class="EFG">HOW</div>
-				<div class="EFG">TO</div>
-				<div class="EFG">FUCK</div>
-				<div class="EFG">YOURSELF</div>
-			 </div>
-			 <div id='check4fuck' style="-webkit-animation: showout 1s;animation:showout 1s;display:block;">
-				<p>TO SEE WHAT TO DO<br>PLACE YOUR CURSOR OVER BUBBLES</p>
-				<input id="u" type="button" value="OK" onclick="ih8u()">
-			  </div>
-			  <script>
-			   function ih8u(){
-					document.getElementById('check4fuck').style='display:none;';
-			   }
-			   </script>
-		 </body>
-	 </html>
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Project Phoenix</title>
+		<link rel="stylesheet" type="text/css" href="normalize.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="playing_zone">
+			<div class='snake_body_element' id='snakeElementNo_1'>
+		</div>
+		<!-- <input type="button" onclick="snakeElementAdd()">
+		<input type="button" onclick="snakeElementMoveToward('right')">
+		<input type="button" onclick="snakeElementMoveToward('left')">
+		<input type="button" onclick="snakeElementMoveToward('bottom')">
+		<input type="button" onclick="snakeElementMoveToward('top')"> -->
+		<script type="text/javascript" src="script.js"></script>
+		<div id='infoTab'>
+			<input type='button' id='pauseButton' value='pause' onclick="gamePause()">
+			<input type='button' id='playButton' value='play' onclick="gameMain(240)">
+			<p id='highScoreTab'>0000</p>
+			<p id='scoreTab'>0</p>
+			<p id='livesTab'>3</p>
+			
+		</div>
+	</body>
+</html>
