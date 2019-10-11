@@ -3,9 +3,12 @@
 	width: 500px;
 	height:500px;
 }
+#snakeElementNo_1{
+	background-color:darkgreen;
+}
 .snake_body_element{
-	width:10px;
-	height:10px;
+	width:5px;
+	height:5px;
 	background-color:green;
 	top:0;
 	bottom:0;
@@ -17,11 +20,37 @@
 body{
 	overflow:hidden;
 }
+#navButContainer{
+	margin-top: 600px;
+	position: absolute;
+	width:500px;
+	height:500px;
+}
+.navBut{
+	position: absolute;
+	width:80px;
+	height:80px;
+}
+#up{
+	left:200px;
+}
+#down{
+	left:200px;
+	top:160px;
+}
+#left{
+	top:80px;
+	left:120px;
+}
+#right{
+	top:80px;
+	left:280px;
+}
 .apples{
 	background-color: red;
 	position:absolute;
-	width:10px;
-	height:10px;
+	width:5px;
+	height:5px;
 }
 #scoreTab{
 	font-family:Impact;

@@ -24,10 +24,10 @@ var snakeElement, //переменная для создания одинако�
       //---------------------------//
      //        переменные         //
     //---------------------------//
-    alert('У вас есть 3 жизни, каждый раз врезаясь в себя вы теряете одну жизнь и часть своего хвоста.');
+    /*alert('У вас есть 3 жизни, каждый раз врезаясь в себя вы теряете одну жизнь и часть своего хвоста.');
     alert('Упарвление: змея двигается автоматически, поворот наверх - стрелочка вверх, вниз - стрелочка вниз и тд.');
     alert('Ешьте яблоки, растите и не врезайтесь в себя.');
-    alert('Для начала игры нажмите play');
+    alert('Для начала игры нажмите play');*/
     document.getElementById('snakeElementNo_1').style.left=rand()+'px';
 	document.getElementById('snakeElementNo_1').style.top=rand()+'px';
 function snakeElementAdd(){
@@ -41,20 +41,20 @@ function snakeElementAdd(){
 	snakeElement.id='snakeElementNo_'+snakeElementNumber;
 	switch(snakeElementDirection[snakeElementNumber-1]){
 		case 'top':		
-			snakeElement.style.top=snakeElementY + 10 + 'px';
+			snakeElement.style.top=snakeElementY + 5 + 'px';
 			snakeElement.style.left=snakeElementX + 'px';
 			break;
 		case 'right':		
 			snakeElement.style.top=snakeElementY + 'px';
-			snakeElement.style.left=snakeElementX - 10 +'px';
+			snakeElement.style.left=snakeElementX - 5 +'px';
 			break;
 		case 'bottom':		
-			snakeElement.style.top=snakeElementY - 10 +'px';
+			snakeElement.style.top=snakeElementY - 5 +'px';
 			snakeElement.style.left=snakeElementX + 'px';
 			break;
 		case 'left':		
 			snakeElement.style.top=snakeElementY + 'px';
-			snakeElement.style.left=snakeElementX + 10 + 'px';
+			snakeElement.style.left=snakeElementX + 5 + 'px';
 			break;
 	
 	}
@@ -66,24 +66,24 @@ function snakeElementMoveToward(snakeDirection, elementNumber){
 	snakeElementY = snakeElementCurrent.getBoundingClientRect().top;
 	switch(snakeDirection){
 		case 'left':
-			snakeElementCurrent.style.left=snakeElementX-10+'px';
+			snakeElementCurrent.style.left=snakeElementX-5+'px';
 			break;
 		case 'right':
-			snakeElementCurrent.style.left=snakeElementX+10+'px';
+			snakeElementCurrent.style.left=snakeElementX+5+'px';
 			break;
 		case 'top':
-			snakeElementCurrent.style.top=snakeElementY-10+'px';
+			snakeElementCurrent.style.top=snakeElementY-5+'px';
 			break;
 		case 'bottom':
-			snakeElementCurrent.style.top=snakeElementY+10+'px';
+			snakeElementCurrent.style.top=snakeElementY+5+'px';
 			break;
 	}
 }
 addEventListener("keydown", function(event){
 	switch(event.keyCode){
-		/*case 32: 
+		case 32: 
 			snakeElementAdd();
-			break;*/
+			break;
 		case 37: 
 			snakeTurn('left');
 			break;
@@ -152,10 +152,10 @@ function animationSet(){
 			document.getElementById('snakeElementNo_'+i).style.left=0+'px';
 		}
 		else if(document.getElementById('snakeElementNo_'+i).getBoundingClientRect().left<0){
-			document.getElementById('snakeElementNo_'+i).style.left=490+'px';
+			document.getElementById('snakeElementNo_'+i).style.left=495+'px';
 		}
 		else if(document.getElementById('snakeElementNo_'+i).getBoundingClientRect().top<0){
-			document.getElementById('snakeElementNo_'+i).style.top=490+'px';
+			document.getElementById('snakeElementNo_'+i).style.top=495+'px';
 		}
 		else if(document.getElementById('snakeElementNo_'+i).getBoundingClientRect().top>499){
 			document.getElementById('snakeElementNo_'+i).style.top=0+'px';
@@ -266,7 +266,7 @@ function gameOver(){
 	document.getElementById('scoreTab').textContent=score;
 }
 function rand(){
-	return 10 * Math.floor(Math.random() * 50);
+	return 5 * Math.floor(Math.random() * 100);
 }
 function gamePause(){
 	clearInterval(gameAnimation);
